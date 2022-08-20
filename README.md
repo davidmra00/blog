@@ -1,4 +1,4 @@
-# Blog-Laravel
+# Blog
 ## Blog creado con laravel
 
 ### Descripcion del proyecto:
@@ -79,7 +79,7 @@ Se usan observers para eliminar la foto de los posts del servidor al momento de 
 
 Se usan Mailables para enviar emails.
 
-Se usan policies.
+Se usan policies para proteger algunas url.
 
 Se crean factories para llenar la bbdd con datos falsos.
 
@@ -104,7 +104,7 @@ Se crean las migraciones para crear todas las tablas en la bbdd.
 
 -composer install
 
--cp .env.example .env o copiar el contenido del archivo .env más abajo
+-cp .env.example .env
 
 -php artisan key:generate
 
@@ -116,66 +116,10 @@ Se crean las migraciones para crear todas las tablas en la bbdd.
 
 -php artisan storage:link
 
--composer dump-autoload
-
 -php artisan migrate --seed
 
 
-### Copiar contenido .env
-
-APP_NAME=Laravel
-
-APP_ENV=local
-
-APP_KEY=base64:cT1gXDJ1FnZsoXkAe6sl0AVJtnLZ8TT2riKE3m14pKs=
-
-APP_DEBUG=true
-
-APP_URL=http://blog.test
-
-
-LOG_CHANNEL=stack
-
-LOG_DEPRECATIONS_CHANNEL=null
-
-LOG_LEVEL=debug
-
-
-DB_CONNECTION=mysql
-
-DB_HOST=127.0.0.1
-
-DB_PORT=3306
-
-DB_DATABASE=blog
-
-DB_USERNAME=root
-
-DB_PASSWORD=
-
-
-BROADCAST_DRIVER=log
-
-CACHE_DRIVER=file
-
-FILESYSTEM_DISK=local
-
-QUEUE_CONNECTION=sync
-
-SESSION_DRIVER=database
-
-SESSION_LIFETIME=120
-
-
-MEMCACHED_HOST=127.0.0.1
-
-
-REDIS_HOST=127.0.0.1
-
-REDIS_PASSWORD=null
-
-REDIS_PORT=6379
-
+### Mis credencales Mail en el archivo .env
 
 MAIL_MAILER=smtp
 
@@ -183,53 +127,15 @@ MAIL_HOST=smtp.mailtrap.io
 
 MAIL_PORT=2525
 
-MAIL_USERNAME=
+MAIL_USERNAME=59005dba654411
 
-MAIL_PASSWORD=
+MAIL_PASSWORD=4be7c054d745c4
 
 MAIL_ENCRYPTION=null
 
 MAIL_FROM_ADDRESS=david@blog.com
 
 MAIL_FROM_NAME=Blog
-
-
-AWS_ACCESS_KEY_ID=
-
-AWS_SECRET_ACCESS_KEY=
-
-AWS_DEFAULT_REGION=us-east-1
-
-AWS_BUCKET=
-
-AWS_USE_PATH_STYLE_ENDPOINT=false
-
-
-PUSHER_APP_ID=
-
-PUSHER_APP_KEY=
-
-PUSHER_APP_SECRET=
-
-PUSHER_HOST=
-
-PUSHER_PORT=443
-
-PUSHER_SCHEME=https
-
-PUSHER_APP_CLUSTER=mt1
-
-
-VITE_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
-
-VITE_PUSHER_HOST="${PUSHER_HOST}"
-
-VITE_PUSHER_PORT="${PUSHER_PORT}"
-
-VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
-
-VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
-
 
 
 ### Otras informaciones
@@ -242,7 +148,8 @@ Este usuario tiene el rol admin y todos los permisos. Autenticarse con este usua
 
 Para otras pruebas autenticarse con los usuarios creados por los factories. Escoger un correo en la bbdd y la constraseña por defecto es 'password'
 
+Url para entrar por el navegador localhost/blog/public
 
-Cambiar el campo APP_URL en el archivo .env por 127.0.0.1 si no se tiene un dominio local para la aplicacion.
+Sino se ejecutan los comandos npm install y npm run dev no funcinara el sistema de login y el frontend se vera desproporcionado.
 
-LLenar todos los campos MAIL en el archivo .env por el servidor de correo a utilizar.Sino el formulario de Contactanos no enviara la informacion.
+LLenar todos los campos MAIL en el archivo .env por el servidor de correo a utilizar o usar mis credenciales.Sino el formulario de Contactanos no enviara la informacion.
