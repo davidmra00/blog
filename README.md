@@ -35,9 +35,9 @@ En la opción usuarios se muestra la lista de usuarios recuperada de la bbdd y s
 
 En la opción roles se muestra la lista de roles recuperada de la bbdd y se pueden crear,editar o eliminar los roles.
 
-En la opción categoría se muestra la lista de categorías recuperada de la bbdd y se pueden crear,editar o eliminar las categorias.
+En la opción categorías se muestra la lista de categorías recuperada de la bbdd y se pueden crear,editar o eliminar las categorias.
 
-En la vista etiquetas se muestran las etiquetas recuperadas de la bbdd y se pueden crear,editar o eliminar etiquetas.
+En la opcion etiquetas se muestran las etiquetas recuperadas de la bbdd y se pueden crear,editar o eliminar etiquetas.
 
 En la opción lista de post se muestran los posts recuperados de la bbdd y se pueden editar o eliminar posts. Tiene una barra de búsqueda que filtra los posts por nombre.
 
@@ -154,4 +154,4 @@ Este usuario tiene el rol admin y todos los permisos. Autenticarse con este usua
 
 Para otras pruebas autenticarse con los usuarios creados por los factories. Escoger un correo en la bbdd y la constraseña por defecto es 'password'
 
-Sino se ejecutan los comandos npm install y npm run dev no funcinara el sistema de login y el frontend se vera desproporcionado.
+Si no se ejecutan los comandos npm install y npm run dev no funcinara el sistema de login y el frontend se vera desproporcionado.
