@@ -100,7 +100,7 @@ Se crean las migraciones para crear todas las tablas en la bbdd.
 
 #### Pasos:
 
--git clone https://github.com/davidmra00/Blog-Laravel.git
+-git clone https://github.com/davidmra00/blog.git
 
 -composer install
 
@@ -148,7 +148,9 @@ Este usuario tiene el rol admin y todos los permisos. Autenticarse con este usua
 
 Para otras pruebas autenticarse con los usuarios creados por los factories. Escoger un correo en la bbdd y la constraseña por defecto es 'password'
 
-Url para entrar por el navegador localhost/blog/public
+Para ejecutar el proyecto abrir una terminal en el directorio del proyecto y ejecutar php artisan serve.Usar esa direccion para acceder por el navegador.
+
+Cambiar el campo APP_URL por la direccion anterior que devolvio el comando php artisan server(127.0.0.1:8000).Si no se hace esto Laravel no encontrara algunas rutas como por ejemplo la foto de fondo de los posts.
 
 Sino se ejecutan los comandos npm install y npm run dev no funcinara el sistema de login y el frontend se vera desproporcionado.
 
