@@ -118,6 +118,8 @@ Se crean las migraciones para crear todas las tablas en la bbdd.
 
 -php artisan migrate --seed
 
+-composer dump-autoload
+
 -Para ejecutar el proyecto abrir una terminal en el directorio del proyecto y ejecutar php artisan serve.Usar esa direccion para acceder por el navegador.
 
 -Cambiar el campo APP_URL por la direccion anterior que devolvio el comando php artisan serve(127.0.0.1:8000).Si no se hace esto Laravel no encontrara algunas rutas como por ejemplo la foto de fondo de los posts.(si el proyecto se abre desde localhost/blog/public en el servidor apache de xampp tampoco encontrara la ruta de la foto de fondo de los post,por eso se recomienda utilizar php artisan serve).
