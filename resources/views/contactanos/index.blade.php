@@ -15,14 +15,14 @@
             @enderror
           </div>
           <div class="mb-6">
-            {!! Form::label('email', 'Nombre', ['class'=>'block text-gray-700 text-sm font-bold mb-2']) !!}
+            {!! Form::label('email', 'Email', ['class'=>'block text-gray-700 text-sm font-bold mb-2']) !!}
             {!! Form::text('email', null, ['class'=>'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline']) !!}
             @error('email')
               <small>*{{$message}}</small>
             @enderror
           </div>
           <div class="mb-6">
-            {!! Form::label('mensaje', 'Nombre', ['class'=>'block text-gray-700 text-sm font-bold mb-2']) !!}
+            {!! Form::label('mensaje', 'Mensaje', ['class'=>'block text-gray-700 text-sm font-bold mb-2']) !!}
             {!! Form::textarea('mensaje', null, ['class'=>'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline']) !!}
             @error('mensaje')
               <small>*{{$message}}</small>
