@@ -16,7 +16,7 @@ En la parte derecha del menú de navegacion aparecen los link 'login' y 'registe
 Una vez autenticado un usuario estos dos links desaparecen y en su lugar se muestra una foto de perfil(si está configurada) y el nombre de dicho usuario,
 al dar click en la foto de perfil se despliega un menú con las opciones 'profile' para la configuración de perfil y 'logout'.
 
-Adicionalmente si el usuario autentificado tiene los permisos necesarios se muestra una opción adicional a este menú desplegable llamado 'admin' que se describe a continuación. Si el usuario no tiene los permisos necesarios este link no se le mostrará.
+Adicionalmente si el usuario autenticado tiene los permisos necesarios se muestra una opción adicional a este menú desplegable llamado 'admin' que se describe a continuación. Si el usuario no tiene los permisos necesarios este link no se le mostrará.
 
 Los post se muestran en formato grid de 3 columnas con paginacion,cada blog tiene una foto de fondo,el nombre y las etiquetas que pertenecen a dicho blog.
 El nombre del post es un link y redirecciona al detalle completo del post,las etiquetas también son links y redireccionan a una vista similar a la vista principal pero solo se muestran los post que tienen esa etiqueta.
@@ -33,7 +33,7 @@ En la opción dashboard solo se muestra texto.
 
 En la opción usuarios se muestra la lista de usuarios recuperada de la bbdd y se pueden editar los roles de los usuarios y eliminar un usuario. También hay una búsqueda que filtra los usuarios por nombre.
 
-En la opción roles se muestra la lista de roles recuperada de la bbdd y se puede crear,editar o eliminar los roles.
+En la opción roles se muestra la lista de roles recuperada de la bbdd y se pueden crear,editar o eliminar los roles.
 
 En la opción categoría se muestra la lista de categorías recuperada de la bbdd y se pueden crear,editar o eliminar las categorias.
 
@@ -118,6 +118,12 @@ Se crean las migraciones para crear todas las tablas en la bbdd.
 
 -php artisan migrate --seed
 
+-Para ejecutar el proyecto abrir una terminal en el directorio del proyecto y ejecutar php artisan serve.Usar esa direccion para acceder por el navegador.
+
+-Cambiar el campo APP_URL por la direccion anterior que devolvio el comando php artisan serve(127.0.0.1:8000).Si no se hace esto Laravel no encontrara algunas rutas como por ejemplo la foto de fondo de los posts.(si el proyecto se abre desde localhost/blog/public en el servidor apache de xampp tampoco encontrara la ruta de la foto de fondo de los post,por eso se recomienda utilizar php artisan serve).
+
+-LLenar todos los campos MAIL en el archivo .env por el servidor de correo a utilizar o usar mis credenciales.Sino el formulario de Contactanos no enviara la informacion.
+
 
 ### Mis credencales Mail en el archivo .env
 
@@ -148,10 +154,4 @@ Este usuario tiene el rol admin y todos los permisos. Autenticarse con este usua
 
 Para otras pruebas autenticarse con los usuarios creados por los factories. Escoger un correo en la bbdd y la constraseña por defecto es 'password'
 
-Para ejecutar el proyecto abrir una terminal en el directorio del proyecto y ejecutar php artisan serve.Usar esa direccion para acceder por el navegador.
-
-Cambiar el campo APP_URL por la direccion anterior que devolvio el comando php artisan server(127.0.0.1:8000).Si no se hace esto Laravel no encontrara algunas rutas como por ejemplo la foto de fondo de los posts.
-
 Sino se ejecutan los comandos npm install y npm run dev no funcinara el sistema de login y el frontend se vera desproporcionado.
-
-LLenar todos los campos MAIL en el archivo .env por el servidor de correo a utilizar o usar mis credenciales.Sino el formulario de Contactanos no enviara la informacion.
